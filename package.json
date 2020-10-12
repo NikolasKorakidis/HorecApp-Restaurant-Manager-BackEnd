@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Restaurant Manager App DB",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/NikolasKorakidis/Restaurant-Manager-BackEnd.git"
+  },
+  "author": "Nikolas Korakidis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NikolasKorakidis/Restaurant-Manager-BackEnd/issues"
+  },
+  "homepage": "https://github.com/NikolasKorakidis/Restaurant-Manager-BackEnd#readme"
+}
