@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/NikolasKorakidis/Restaurant-Manager-BackEnd/issues"
   },
-  "homepage": "https://github.com/NikolasKorakidis/Restaurant-Manager-BackEnd#readme"
+  "homepage": "https://github.com/NikolasKorakidis/Restaurant-Manager-BackEnd#readme",
+  "dependencies": {
+    "pg": "^8.4.1",
+    "sequelize": "^6.3.5",
+    "sequelize-cli": "^6.2.0"
+  }
 }
