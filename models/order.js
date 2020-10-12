@@ -9,6 +9,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      order.belongsTo(models.table);
+      order.belongsToMany(models.item, {
+        through: "orderItems",
+        foreignKey: "orderId",
+      });
     }
   }
   order.init(
