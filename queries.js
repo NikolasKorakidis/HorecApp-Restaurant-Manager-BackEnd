@@ -1,11 +1,38 @@
-const { user, item, category, order, table } = require("./models");
+const { user, item, category, order, table, orderItem } = require("./models");
 
-async function listsWithUsers() {
-  const lists = await todoList.findAll({
-    include: [user],
+const users = async () => {
+  const res = await user.findAll();
+  console.log(res);
+};
+
+// users();
+
+const orders = async () => {
+  const res = await orderitem.findAll({
+    where: {
+      orderId: 1,
+      itemId: 4,
+    },
   });
+  console.log(res);
+};
+// orders();
+console.log(orderItem);
 
-  return lists.map((list) => list.get({ plain: true }));
-}
+const items = async () => {
+  const res = await item.findAll({
+    where: {
+      categoryId: 1,
+    },
+  });
+  console.log(res);
+};
 
-listsWithUsers().then((lists) => console.log(lists));
+// items();
+
+const tables = async () => {
+  const res = await table.findAll();
+  console.log(res);
+};
+
+// tables();
