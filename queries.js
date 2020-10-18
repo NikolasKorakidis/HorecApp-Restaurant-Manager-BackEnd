@@ -8,16 +8,15 @@ const users = async () => {
 // users();
 
 const orders = async () => {
-  const res = await orderitem.findAll({
+  const res = await orderItem.findAll({
     where: {
-      orderId: 1,
-      itemId: 4,
+      orderId: 3,
     },
   });
   console.log(res);
 };
-// orders();
-console.log(orderItem);
+orders();
+// console.log(orderItem);
 
 const items = async () => {
   const res = await item.findAll({
@@ -31,7 +30,11 @@ const items = async () => {
 // items();
 
 const tables = async () => {
-  const res = await table.findAll();
+  const res = await table.findAll({
+    where: {
+      order: true,
+    },
+  });
   console.log(res);
 };
 

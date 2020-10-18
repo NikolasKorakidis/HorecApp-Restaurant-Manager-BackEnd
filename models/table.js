@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   table.init(
     {
-      number: DataTypes.INTEGER,
+      position: DataTypes.STRING,
     },
     {
       sequelize,

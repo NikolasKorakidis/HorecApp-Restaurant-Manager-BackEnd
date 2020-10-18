@@ -7,15 +7,27 @@ module.exports = {
       [
         {
           id: 1,
+          tableId: 2,
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
         {
           id: 2,
+          tableId: 10,
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
         {
           id: 3,
+          tableId: 15,
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
         {
           id: 4,
+          tableId: 7,
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
       ],
       {}
