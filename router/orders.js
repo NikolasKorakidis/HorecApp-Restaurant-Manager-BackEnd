@@ -98,6 +98,34 @@ router.patch("/add/:id", async (req, res) => {
   }
 });
 
+router.patch("/remove/:id", async (req, res) => {
+  const itemId = parseInt(req.body.itemId);
+  const id = parseInt(req.params.id);
+
+  try {
+    const order = await Order.findByPk(id, {
+      include: Item,
+    });
+    const itemAlreadyPresent = await order.hasItem(itemId);
+
+    if (itemAlreadyPresent) {
+      const itemToUpdate = await OrderItem.findOne({
+        where: {
+          orderId: id,
+          itemId: itemId,
+        },
+      });
+
+      itemToUpdate.qnt =
+        itemToUpdate.qnt === 1 ? itemToUpdate.destroy() : itemToUpdate.qnt - 1;
+      const item = await itemToUpdate.save();
+      res.json(item);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 // on delete if there remove one and if is 1 delete
 
 module.exports = router;
